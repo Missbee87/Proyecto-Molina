@@ -6,7 +6,7 @@
 body {
   background: $bgColor;
   color: $mainColor;
-  font-wight: map-get($miMap, regular);
+  font-weight: map-get($miMap, regular);
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
   padding: 0 1rem;
