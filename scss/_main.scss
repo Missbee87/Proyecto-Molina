@@ -16,7 +16,7 @@ body {
   padding: 2 1em;
   padding-bottom: 1.5em;
   color: $mainColor;
-  font-wight: map-get($miMap, bold);
+  font-weight: map-get($miMap, bold);
   @media all and (max-width: $point-md) {
     font-size: 1rem;
     }
@@ -53,7 +53,7 @@ body {
   background-size: 200px;
   a {
   text-decoration: none;
-  color: #000;
+  color: $mainColor;
   }
   li {
   list-style: none;
@@ -75,51 +75,52 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   padding: 45px 0px;
-  .rounded{
-  width: 350px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    .rounded{
+    width: 350px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    @media all and (max-width: $point-md) {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px; 
+    }
+    .tittle{
+    color: $mainColor;
+    font-size: 30px;
+    }
+    .text{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 18px;
+    }
+    ul {
+    list-style: none;
+    }
+    a {
+    text-decoration: none;
+    color: #efefef;
+    }
+    .BoxDos li {
+    padding: 5px;
+    }
   }
-  @media all and (max-width: $point-md) {
-  width: 90%;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 30px;
-  padding: 35px 0px; 
-  }
-  .tittle{
-  color: $mainColor;
-  font-size: 30px;
-  }
-  .text{
-  color: #efefef;
-  margin-bottom: 10px;
-  font-size: 18px;
-  }
-  ul {
-  list-style: none;
-  }
-  a {
-  text-decoration: none;
-  color: #efefef;
-  }
-  .BoxDos li {
-  padding: 5px;
-  }
-}
-}
+
   .grupoDos{
   background-color: #0a1a2a;
   padding: 15px 10px;
   text-align: center;
   color: $mainColor;
-  li {
-  padding: 5px;
+    li {
+    padding: 5px;
+    }
   }
-}
-.tittle {
-  font-weight: regular;
+  .tittle {
+    font-weight: regular;
+  }
 }
 
 /** cards **/
@@ -130,7 +131,7 @@ body {
   font-size: 25px;
 }
 .card-body {
-  color: #000;
+  color: $mainColor;
   background-image: linear-gradient(to top right, #B066FE, #63E2FF);
 }
 /**parallax**/
@@ -145,7 +146,7 @@ body {
   a{
   font-size: 40px;
   font-weight: extra-bold;
-  color: #000;
+  color: $mainColor;
   text-decoration: none;
   }
   li{
@@ -201,7 +202,7 @@ body {
   text-decoration: none;
   transition: all 300ms;
   border: 2px solid black;
- }
+  }
   &:hover a{
     transform: translate(-50%, -50%) scale(1);
   }
@@ -255,7 +256,7 @@ body {
   opacity: .8;
   z-index: -1;
   }
-   p {
+  p {
   font-size: 40px;
   font-weight: bold;
   }
@@ -302,11 +303,11 @@ body {
 /** Contacto **/
 
 .contact-form {
-    background: #222222;
+  background: #222222;
   form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-     label {
+    label {
       display: block;
     }
     p {
@@ -318,48 +319,48 @@ body {
     .block {
     grid-column: 1 / 3;
     }
-  button,
-  input,
-  textarea {
-    width: 100%;
-    padding: .7rem;
-    border: none;
-    background: none;
-    outline: 0;
-    color: $mainColor;
-    border-bottom: 2px solid cyan;
-  }
-   button {
-    background-image: linear-gradient(to top right, #B066FE, #63E2FF);
-    border: 0;
-    padding: 1em;
-    text-transform: uppercase;
-    &:hover,
-    &:focus {
-    background: #0a1a2a;
-    color: $mainColor;
-    transition: background-color 1s ease-out;
-    outline: 0;
+    button,
+    input,
+    textarea {
+      width: 100%;
+      padding: .7rem;
+      border: none;
+      background: none;
+      outline: 0;
+      color: $mainColor;
+      border-bottom: 2px solid cyan;
+    }
+     button {
+      background-image: linear-gradient(to top right, #B066FE, #63E2FF);
+      border: 0;
+      padding: 1em;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+      background: #0a1a2a;
+      color: $mainColor;
+      transition: background-color 1s ease-out;
+      outline: 0;
+      }
     }
   }
 }
-}
 .contact-info {
-    background: #000;
-     p,
-     ul {
+  background: #000;
+  p,
+  ul {
     margin: 0 0 1rem 0;
     list-style: none;
     font-size: 45px;
     @media all and (min-width: $point-md) {
-     text-align: left;
+      text-align: left;
     }
-}
-    a{
-      text-decoration: none;
-      color: $mainColor;
-      font-size: 35px;
-}
+  }
+  a{
+    text-decoration: none;
+    color: $mainColor;
+    font-size: 35px;
+  }
 }
 .tittle{
   font-size: 60px;
@@ -368,16 +369,16 @@ body {
 }
 
 @media all and (min-width: $point-md) {
-    body {
-        padding: 0 4em;
-    }
-    .contact-wraped {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-      }
-    .contact-wraped > * {
-        padding: 2rem;
-    }
+  body {
+    padding: 0 4em;
+  }
+  .contact-wraped {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wraped > * {
+    padding: 2rem;
+  }
 }
 
 
